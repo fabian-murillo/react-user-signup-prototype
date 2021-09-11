@@ -19,9 +19,17 @@ function useForm(validate) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setErrors(validate(values));
   };
+
+  useEffect(() => {
+    const storedValues = JSON.parse(window.localStorage.getItem("values"));
+    setValues(storedValues);
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("values", JSON.stringify(values));
+  }, [values]);
 
   return {
     values,

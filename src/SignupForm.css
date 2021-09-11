@@ -1,0 +1,44 @@
+.svg-inline--fa.fa-w-14 {
+  width: 100%;
+}
+
+h1 {
+  color: var(--black);
+  margin-top: 0;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 8px 10px;
+  border: var(--line);
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: -0.7rem;
+  color: #f00e0e;
+}
+
+.form-inputs label {
+  color: var(--black);
+}
+
+button {
+  width: 100%;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 300px) {
+  .form-inputs label {
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .form-inputs label {
+    margin-bottom: -0.3rem;
+  }
+}

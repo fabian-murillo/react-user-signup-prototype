@@ -2,15 +2,40 @@
   /* Colors */
   --green: #00ebc7;
   --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
   --black: #1b2d45;
+  --white: #fff;
 
+  /* Style */
   --line: solid 1px var(--lineColor);
-  --lineColor: var(--grey);
+  --lineColor: var(--green);
   --smallText: 0.8rem;
+  --borderRadius: 10px;
 
   /* Intentions */
   --primary: var(--green);
   --buttonTextColor: var(--black);
+  --cardBg: var(--white);
+
+  /* Elevation */
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  font-size: var(--baseFontSize);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -27,13 +52,6 @@ label {
   font-size: var(--smallText);
 }
 
-input {
-  padding: 8px 10px;
-  border: var(--line);
-  border-radius: 4px;
-  margin-bottom: 14px;
-}
-
 button {
   --buttonColor: var(--primary);
   appearance: none;
@@ -44,4 +62,8 @@ button {
   padding: 5px 25px;
   box-shadow: var(--level-1);
   transition: 0.3s ease-in-out box-shadow;
+}
+
+button:hover {
+  box-shadow: var(--level-2);
 }
