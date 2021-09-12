@@ -17,7 +17,7 @@ function validator(values) {
     errors.password = "Please enter a password.";
   }
 
-  if (values?.password.length < 8) {
+  if (values?.password?.length < 8) {
     errors.password = "Password must be at least 8 characters.";
   }
 
