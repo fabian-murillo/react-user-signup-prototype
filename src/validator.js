@@ -9,23 +9,23 @@ function validator(values) {
     return errors;
   }
 
-  if (!values.username.trim()) {
+  if (!values?.username.trim()) {
     errors.username = "Please enter a username.";
   }
 
-  if (!values.password) {
+  if (!values?.password) {
     errors.password = "Please enter a password.";
   }
 
-  if (values.password.length < 8) {
+  if (values?.password?.length < 8) {
     errors.password = "Password must be at least 8 characters.";
   }
 
-  if (!values.verifyPassword) {
+  if (!values?.verifyPassword) {
     errors.verifyPassword = "Please verify password.";
   }
 
-  if (values.password !== values.verifyPassword) {
+  if (values?.password !== values.verifyPassword) {
     errors.verifyPassword = "Passwords do not match.";
   }
 
