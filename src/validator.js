@@ -1,13 +1,13 @@
 function validator(values) {
   let errors = {};
 
-  if (values === null) {
-    errors.username = "Please enter a username.";
-    errors.password = "Please enter a password.";
-    errors.verifyPassword = "Please verify password.";
+  // if (values === null) {
+  //   errors.username = "Please enter a username.";
+  //   errors.password = "Please enter a password.";
+  //   errors.verifyPassword = "Please verify password.";
 
-    return errors;
-  }
+  //   return errors;
+  // }
 
   if (!values?.username.trim()) {
     errors.username = "Please enter a username.";
@@ -17,7 +17,7 @@ function validator(values) {
     errors.password = "Please enter a password.";
   }
 
-  if (values?.password?.length < 8) {
+  if (values?.password.length < 8) {
     errors.password = "Password must be at least 8 characters.";
   }
 
@@ -25,7 +25,7 @@ function validator(values) {
     errors.verifyPassword = "Please verify password.";
   }
 
-  if (values?.password !== values.verifyPassword) {
+  if (values?.password !== values?.verifyPassword) {
     errors.verifyPassword = "Passwords do not match.";
   }
 
