@@ -19,7 +19,8 @@ function useForm(validate) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setErrors(validate(values));
+    const errors = validate(values);
+    setErrors(errors);
   };
 
   useEffect(() => {

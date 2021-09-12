@@ -6,6 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function SignupForm() {
   const { values, handleInput, handleSubmit, errors } = useForm(validate);
+
   return (
     <div className="card">
       <FontAwesomeIcon color={"var(--black)"} size="2x" icon={faUser} />
