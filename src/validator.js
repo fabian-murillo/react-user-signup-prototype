@@ -5,6 +5,8 @@ function validator(values) {
     errors.username = "Please enter a username.";
     errors.password = "Please enter a password.";
     errors.verifyPassword = "Please verify password.";
+
+    return errors;
   }
 
   if (!values.username.trim()) {
