@@ -1,6 +1,12 @@
 function validator(values) {
   let errors = {};
 
+  if (values === null) {
+    errors.username = "Please enter a username.";
+    errors.password = "Please enter a password.";
+    errors.verifyPassword = "Please verify password.";
+  }
+
   if (!values.username.trim()) {
     errors.username = "Please enter a username.";
   }
